@@ -366,40 +366,59 @@ body{
 
 /* 웹 관련 용어 */
 .term{
-  background: #aaa linear-gradient(to bottom, #ccc, #aaa);
   margin-top: 20px;
-  border-radius: 5px;
+  background: #aaa linear-gradient(to bottom, #ccc, #eee);
   border: 1px solid #aaa;
-  padding: 10px;
+  border-radius: 5px;
+  padding: 15px;
 }
 
 .term-title{
-  margin-bottom: 10px;
-  font-weight: 800;
+  font-weight: 700;
+  font-size: 1.5rem;
 }
 
 .term-list{
+  margin-top: 15px;
+}
+
+.term div{
   display: flow-root;
+  margin-top: 10px;
 }
 
 .term-list-subject{
-  background: pink;
-  margin-left: 70px;
-  margin-bottom: 5px;
-  font-size: 15.5px;
-  font-weight: 600;
-  color: blue;
+  width: 145px;
+  color: #296897;
 }
+
 .term-list-thumbnail{
-  float: left;
-  margin-right: 10px;
-  transform:translateY(-20px);
+  position: relative;
+  top: 2px;
 }
+
+.term-list-thumbnail img{
+  vertical-align: top;
+}
+
 .term-list-brief{
-  background: skyblue;
-  font-size: 15.5px;
-  line-height: 20px;
+  width: 145px;
+  margin-top: 5px;
+  line-height: 1.5;
 }
+
+.even .term-list-brief,
+.even .term-list-subject,
+.odd .term-list-thumbnail{
+  float: left;
+}
+
+.odd .term-list-brief,
+.odd .term-list-subject,
+.even .term-list-thumbnail{
+  float: right;
+}
+
 
 /* 슬로건 */
 .slogan{
