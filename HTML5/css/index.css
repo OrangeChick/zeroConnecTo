@@ -364,6 +364,22 @@ body{
   background-size: 14px 14px, 100%;
 }
 
+/* 웹 관련 용어 */
+.term{
+  margin: 10px 0;
+  background: #aaa linear-gradient(to bottom, #ccc, #aaa);
+  border-radius: 5px;
+  border: 1px solid #aaa;
+  padding: 10px;
+}
+
+.term-title{
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+
+
 /* 슬로건 */
 .slogan{
   background: lime;
