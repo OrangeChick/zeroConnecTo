@@ -463,36 +463,68 @@ body{
 .board{
   margin-top:20px;
   background: yellow;
+  position: relative;
+  height: 214px;
 }
 
-.board-section{
-  position:relative;
+.board-tab{
+  float: left;
+  border: 1px solid #aaa;
+  border-radius: 5px 5px 0 0;
+  background: #ccc;
+  padding: 10px 15px;
+  color: #666;
 }
 
-.notice{
-  display:none;
+.board-section.is-select .board-tab{
+  background: #fff;
+  color: #ed552f;
+  border-color: currentColor currentColor #fff currentColor;
+}
+
+.board-panel{
+  display: none;
+  position: absolute;
+  top: 45px;
+  left: 0;
+  width: 100%;
+}
+
+.board-section.is-select .board-panel{
+  display: flex;
+  flex-flow: row wrap;
+  gap: 10px;
 }
 
 .board-panel li{
-  display: flow-root;
+  display: flex;
+  flex-flow: row nowrap;
+  width: 100%;
+  align-items: center;
 }
 
-.board-panel li a{
-  display: inline-block;
-  width: 300px;
-  height: 1.3em;
+.board-panel a{
+  flex-grow: 1;
+  white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  white-space: nowrap;
-}
-
-.board-panel li time{
-  float:right;
+  padding: 4px 0;
 }
 
 .board-more{
-  position:absolute;
-  top:0; right:0;
+  display: none;
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  padding: 8px;
+}
+
+.board-more::before{
+  color: hsla(110, 50%, 30%, 1);
+}
+
+.board-section.is-select .board-more{
+  display: block !important;
 }
 
 /* 슬로건 */
