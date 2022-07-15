@@ -419,6 +419,36 @@ body{
   float: right;
 }
 
+/* 검색 폼 */
+.search-form{
+  background: linear-gradient(to bottom, #ccc, #eee);
+  padding: 10px;
+  text-align: center;
+  border-radius: 10px 10px 0 0;
+  border: 1px solid #aaa;
+  border-bottom: 0;
+}
+
+.search label{
+  font-weight: 600;
+  font-size: 15px;
+}
+
+.search input{
+  width: 170px;
+  border: 1px solid #aaa;
+  border-radius: 4px;
+  margin: 0 15px;
+  padding: 4px;
+  font-weight: 600;
+}
+
+.search-button{
+  background-color: #181818;
+  color: #fff;
+  border-radius: 3px;
+  padding: 2px 10px;
+}
 
 /* 슬로건 */
 .slogan{
