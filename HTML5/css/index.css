@@ -668,70 +668,95 @@ body{
   padding: 8px;
 }
 
-/* 이벤트 */
+/* 신규 이벤트 및 관련 사이트 */
 .gradient-effect{
-  background: linear-gradient(to bottom, #ccc, #eee);
   border: 1px solid #aaa;
   border-radius: 5px;
   padding: 10px;
-}
-
-.event{
-  padding-bottom: 10px;
-  border-bottom: 1px solid #ccc;
-  position: relative;
-}
-
-.event-title{
-  font-weight: 600;
-  width: 100px;
+  background: #ccc linear-gradient(to bottom, #ccc, #eee);
 }
 
 .accent-color{
-  color: #ed552f;
+  color: #d16527;
 }
 
-.event-button-wrapper{
-  position: absolute;
-  top: 0;
-  right: 0;
-  line-height: 0;
+.event{
+  display: flex;
+  flex-flow: row wrap;
+  border-bottom: 1px solid #aaa;
 }
 
-.event-button-prev{
-  width: 19px;
+.event-title{
+  font-size: 1.5rem;
+  font-weight: 700;
+
+}
+
+/* .event-button-wrapper{
+  margin-left: auto;
   height: 18px;
-  font-size: 0;
-  background: url(./images/back_forward.png) -1px center;
-  border: 1px solid #aaa;
-/*   position: absolute;
-  top: 0;
-  right: 24px; */
+  overflow: hidden;
+  display: flex;
+  gap: 6px;
+}
+
+.event button{
+  width: 19px;
+  height: 0 !important;
+  border: 0;
+  padding: 18px 0 0 0;
+  background-color: transparent;
+  background-image: url(./images/back_forward.png);
+  background-repeat: no-repeat;
+}
+
+.event button:focus{
+  outline-offset: -2px;
 }
 
 .event-button-next{
+  background-position: -36px 0;
+} */
+
+.event-button-container{
+  padding: 4px;
+  margin-left: auto;
+  display: flex;
+  flex-flow: row nowrap;
+  gap: 6px;
+  transform: translate(4px ,-4px);
+}
+
+.event-button-container button{
   width: 19px;
   height: 18px;
-  font-size: 0;
-  background: url(./images/back_forward.png) -37px center;
-  border: 1px solid #aaa;
-/*   position: absolute;
-  top: 0;
-  right: 0; */
+  padding: 0;
+  border: 0;
+  background: transparent;
+  background-image: url(./images/back_forward.png);
+  background-repeat: no-repeat;
+
+}
+
+.event-button-container .event-button-next{
+  background-position: -36px 0;
+}
+
+.event-detail{
+  width: 100%;
 }
 
 .event-thumbnail{
-  padding: 10px 0;
+  margin: 2px 0 10px;
+}
+.event-brief{
+  margin: 10px 0;
 }
 
 .event-thumbnail img{
-  box-shadow: 5px 5px 0 0 #aaa;
+  border: 1px solid #aaa;
+  box-shadow: 5px 5px 0 0 #bbb;
 }
-
-.event-breif{
-  font-weight: 500;
-}
-
 
 /* 슬로건 */
 .slogan{
