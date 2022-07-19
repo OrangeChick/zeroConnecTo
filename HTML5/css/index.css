@@ -689,7 +689,26 @@ body{
 .event-title{
   font-size: 1.5rem;
   font-weight: 700;
+}
 
+.related-list{
+  background: #fff;
+  padding: 0 10px;
+  border: 1px solid #aaa;
+  border-radius: 5px;
+  height: 27px;
+  overflow: hidden;
+}
+
+.related-list:focus, .related-list:hover{
+  height: 147px;
+}
+
+.related-list li{
+  height: 25px;
+  text-indent: 20px;
+  line-height: 25px;
+  margin-bottom: 5px;
 }
 
 /* .event-button-wrapper{
@@ -749,6 +768,7 @@ body{
 .event-thumbnail{
   margin: 2px 0 10px;
 }
+
 .event-brief{
   margin: 10px 0;
 }
@@ -756,6 +776,12 @@ body{
 .event-thumbnail img{
   border: 1px solid #aaa;
   box-shadow: 5px 5px 0 0 #bbb;
+}
+
+.related-title{
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin: 10px 0;
 }
 
 /* 슬로건 */
