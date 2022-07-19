@@ -668,6 +668,70 @@ body{
   padding: 8px;
 }
 
+/* 이벤트 */
+.gradient-effect{
+  background: linear-gradient(to bottom, #ccc, #eee);
+  border: 1px solid #aaa;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+.event{
+  padding-bottom: 10px;
+  border-bottom: 1px solid #ccc;
+  position: relative;
+}
+
+.event-title{
+  font-weight: 600;
+  width: 100px;
+}
+
+.accent-color{
+  color: #ed552f;
+}
+
+.event-button-wrapper{
+  position: absolute;
+  top: 0;
+  right: 0;
+  line-height: 0;
+}
+
+.event-button-prev{
+  width: 19px;
+  height: 18px;
+  font-size: 0;
+  background: url(./images/back_forward.png) -1px center;
+  border: 1px solid #aaa;
+/*   position: absolute;
+  top: 0;
+  right: 24px; */
+}
+
+.event-button-next{
+  width: 19px;
+  height: 18px;
+  font-size: 0;
+  background: url(./images/back_forward.png) -37px center;
+  border: 1px solid #aaa;
+/*   position: absolute;
+  top: 0;
+  right: 0; */
+}
+
+.event-thumbnail{
+  padding: 10px 0;
+}
+
+.event-thumbnail img{
+  box-shadow: 5px 5px 0 0 #aaa;
+}
+
+.event-breif{
+  font-weight: 500;
+}
+
 
 /* 슬로건 */
 .slogan{
