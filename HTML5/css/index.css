@@ -39,6 +39,21 @@ body{
   font-size: 1.4rem;
 }
 
+/* 스킵 네비게이션 */
+.skip-nav a{
+  padding: 4px 0;
+  display: none;
+  flex-flow: row nowrap;
+  justify-content: center;
+  background: #000;
+  color: #fff;
+  padding: 8px;
+}
+
+.skip-nav a:focus{
+  display: flex;
+}
+
 /* 레이아웃 */
 .header, .visual, .main, .slogan, .footer-inner{
   width: 940px;
@@ -791,67 +806,56 @@ body{
 /* 인기사이트 */
 .favorite{
   position: relative;
+  margin: 20px 0;
 }
 
 .favorite-list{
   margin-top: 10px;
-  background: yellow;
   /* overflow: hidden; */
   list-style-type: none;
 }
 
 .favorite-list li{
-  background: pink;
+  position: relative;
   margin-top: 8px;
+  counter-increment: number;
 }
 
 .favorite-list li::before{
-  content:'1';
-  display: inline-block;
-  width: 20px;
-  padding: 3px;
-  margin-right: 10px;
-  background: #aaa;
+  content: counter(number);
+  display: inline-flex;
+  padding: 2px 5px 1px;
+  font-size: 1.1rem;
   color: #fff;
-  text-align: center;
-  border-radius: 3px;
+  background: #aaa;
+  border-radius: 4px;
+  min-width: 1.5em;
+  justify-content: 1;
+  margin-right: 0.5em;
 }
 
-.favorite-list li.no1::before{
-  content:'1';
+.favorite-list a{
+  vertical-align: middle;
 }
 
-.favorite-list li.no2::before{
-  content:'2';
-}
-
-.favorite-list li.no3::before{
-  content:'3';
-}
-
-.favorite-list li.no4::before{
-  content:'4';
-}
-
-.favorite-list li em{
-  display: inline-block;
-  width: 11px;
+.favorite-list em{
+  position: absolute;
+  width: 9px;
   height: 11px;
+  right: 0;
+  top: 50%;
+  margin-top: -5px;
+  background-image: url(./images/rank.png);
+  background-repeat: no-repeat;
+
 }
 
-.favorite-list li em.up{
-  background: url(./images/rank.png) no-repeat;
-  background-position: center 0;
+.favorite-list .down{
+  background-position: 0 100%;
 }
 
-.favorite-list li em.down{
-  background: url(./images/rank.png) no-repeat 0 -44px;
-  background-position: center -44px;
-}
-
-.favorite-list li em.stop{
-  background: url(./images/rank.png) no-repeat 0 -26px;
-  background-position: center center;
+.favorite-list .stop{
+  background-position: 0 50%;
 }
 
 .favorite-more{
