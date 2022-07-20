@@ -12,11 +12,27 @@
     crossorigin="anonymous" />
   <link rel="stylesheet" as="style" crossorigin
     href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css" />
-  <link rel="stylesheet" href="./css/main.css" />
+  <link rel="stylesheet" href="./css/index.css" />
 </head>
 
 <body>
-  
+  <header>
+    <a href="/" class="logo">로고</a>
+    <ul class="info-link">
+      <li><a href="/">로그인</a></li>
+      <li><a href="/">회원가입</a></li>
+      <li><a href="/">커뮤니티</a></li>
+    </ul>
+    <form action="">
+      <legend>검색 폼</legend>
+      <div>
+        <label for="searcBox">검색폼</label>
+        <input type="text" id="searchBox" required="required" placeholder="검색어를 입력하세요" />
+      </div>
+      <button type="submit">검색</button>
+    </form>
+    <button>햄버거 버튼</button>
+  </header>
 </body>
 
 </html>
