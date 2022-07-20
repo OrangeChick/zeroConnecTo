@@ -883,13 +883,15 @@ body{
 }
 
 .slogan-title{
-  position: absolute;
+  /* position: absolute;
   left: 35px;
-  bottom: -25px;
+  bottom: -25px; */
+  filter: grayscale(80%);
   width: 110px;
   height: 83px;
   text-align: center;
   line-height: 83px;
+  background-color: yellow;
 }
 
 .slogan-title::after{
@@ -911,7 +913,6 @@ body{
   display: inline-block;
   font-size: 2.5rem;
   transform: translateY(5px);
-  background: pink;
 }
 
 .slogan-content q::after{
@@ -926,6 +927,12 @@ body{
 }
 
 .footer-inner{
-  background: coral;
-  height: 150px;
+  display:grid;
+  grid-template-columns: 100px 287px 287px 287px 83px;
+  grid-gap: 35px;
+}
+
+.guide-list{
+  display: flex;
+  justify-content: space-between;
 }
