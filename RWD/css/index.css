@@ -90,16 +90,12 @@ input[type="search"]{
   border: 0;
 }
 
-/* 네비게이션 */
-
-.menu__list{
-  background: var(--secondary-color);
-  display: flex;
-  flex-flow: row nowrap;
-  justify-content: space-between;
-  padding: 20px;
-  font-weight: 600;
-  color: var(--white);
+/* 공통 메인 메뉴 */
+.menu__link{
+  display: block;
+  padding: var(--spacing-xs);
+  font-size: var(--text-md);
+  font-weight: 700;
 }
 
 /* 모바일 디바이스 (Mobile Device) */
@@ -123,7 +119,6 @@ input[type="search"]{
 
   /* 모바일 메인메뉴 제어버튼 */
   .buttonWrapper{
-    background: red;
     padding: 0.25rem;
     overflow: hidden;
     position: absolute;
@@ -184,20 +179,26 @@ input[type="search"]{
     transform: rotate(-45deg);
   }
 
-  /* 모바일 네비게이션 */
-
-  .appNavigation.is--active .menu__list{
-    flex-flow: column nowrap;
-    justify-content: flex-start;
-    gap: 20px;
-    background: var(--green);
-    color: var(--black);
-    height: 100%;
-    width: 70%;
-    position: absolute;
-    top: 0; 
+  /* 모바일 메인 메뉴 */
+  .menu{
+    background: var(--accent-opacity-color);
+    position: fixed;
+    top: 0;
     left: 0;
-    padding: 30px;
+    width: 70vw;
+    height: 100vh;
+    backdrop-filter: blur(4px);
+    padding: var(--spacing-md);
+    transform: translateX(-150%);
+    transition: all 300ms;
+  }
+
+  .menu__item{
+    border-bottom: 1px solid var(--silver);
+  }
+
+  .menu.is--active{
+    transform: none; /* or transform: translateX(0) */
   }
 
 }
@@ -230,6 +231,28 @@ input[type="search"]{
   /* 데스크탑 메인메뉴 제어버튼 */
   .button--burger{
     display: none;
+  }
+
+  /* 데스크탑 메인 메뉴 */
+  .menu{
+    background: var(--secondary-color);
+    padding: var(--spacing-base) var(--spacing-md);
+  }
+
+  .menu__list{
+    max-width: var(--container-width);
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--spacing-md);
+  }
+
+  .menu__link{
+    color: var(--white);
+    text-shadow: 1px 1px 0 var(--black), -1px -1px 0 var(--black);
   }
 }
 
