@@ -104,21 +104,65 @@ input[type="search"]{
 }
 
 /* 공통 메인 콘텐츠 섹션 제목 */
-.sprite{
+.appMain [class*="__title"]{
+  margin-bottom: var(--spacing-base);
   font-weight: 700;
-  height: 59px;
-  background: url(./../images/sprite_main.png) no-repeat;
-  padding-left: 58px;
-  display: flex;
-  flex-flow: column;
+  font-size: var(--text-md);
 }
 
-.accentBook{
-  color: var(--green);
+.appMain [class*="__enTitle"]{
+  font-weight: 400;
+  font-size: var(--text-base);
+}
+
+.sprite{
+  min-height: 3.75rem;
+  padding-left: 4rem;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center; /* 중앙정렬 */
+  background-image: url(./../images/sprite_main.png);
+  background-repeat: no-repeat;
+}
+
+.spriteBook{
+  background-position: 0 0;
+}
+
+.spriteNews{
+  background-position: 0 -230px;
+}
+
+.spriteBoard{
+  background-position: 0 -115px;
+}
+
+.spriteFavorite{
+  background-position: 0 -345px;
+}
+
+.spriteTwitter{
+  background-position: 0 -460px;
 }
 
 .accentNews{
-  color: var(--yellow);
+  color: var(--accent-news);
+}
+
+.accentBoard{
+  color: var(--accent-board);
+}
+
+.accentFavorite{
+  color: var(--accent-favorite);
+}
+
+.accentTwitter{
+  color: var(--accent-twitter);
+}
+
+.accentBook{
+  color: var(--accent-book);
 }
 
 
