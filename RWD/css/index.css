@@ -14,7 +14,7 @@
   position: relative;
   display: flex;
   flex-flow: column nowrap;
-  padding: var(--spacing-base) var(--spacing-md);
+  padding: var(--spacing-base) var(--spacing-lg);
   gap: var(--spacing-base);
 }
 
@@ -98,6 +98,30 @@ input[type="search"]{
   font-weight: 700;
 }
 
+/* 공통 메인 콘텐츠 */
+.appMain{
+  padding: var(--spacing-base) var(--spacing-lg);
+}
+
+/* 공통 메인 콘텐츠 섹션 제목 */
+.sprite{
+  font-weight: 700;
+  height: 59px;
+  background: url(./../images/sprite_main.png) no-repeat;
+  padding-left: 58px;
+  display: flex;
+  flex-flow: column;
+}
+
+.accentBook{
+  color: var(--green);
+}
+
+.accentNews{
+  color: var(--yellow);
+}
+
+
 /* 모바일 디바이스 (Mobile Device) */
 @media (min-width: 320px) and (max-width: 768px){
   /* 모바일 헤더 */
@@ -123,7 +147,7 @@ input[type="search"]{
     overflow: hidden;
     position: absolute;
     top: 3.75rem;
-    right: var(--spacing-md);
+    right: var(--spacing-lg);
     transform: translate(0.25rem, -0.25rem);
   }
 
@@ -188,7 +212,7 @@ input[type="search"]{
     width: 70vw;
     height: 100vh;
     backdrop-filter: blur(4px);
-    padding: var(--spacing-md);
+    padding: var(--spacing-lg);
     transform: translateX(-150%);
     transition: all 300ms;
   }
@@ -236,7 +260,7 @@ input[type="search"]{
   /* 데스크탑 메인 메뉴 */
   .menu{
     background: var(--secondary-color);
-    padding: var(--spacing-base) var(--spacing-md);
+    padding: var(--spacing-base) var(--spacing-lg);
   }
 
   .menu__list{
@@ -253,6 +277,14 @@ input[type="search"]{
   .menu__link{
     color: var(--white);
     text-shadow: 1px 1px 0 var(--black), -1px -1px 0 var(--black);
+  }
+
+  /* 데스크탑 메인 콘텐츠 */
+  .appMain{
+    max-width: var(--container-width);
+    margin-left: auto;
+    margin-right: auto;
+    background: #ffc;
   }
 }
 

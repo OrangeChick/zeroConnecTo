@@ -24,12 +24,12 @@ body{
 }
 
 /* 유연한 미디어 */
-/* img{
+img{
   max-width: 100%;
-  height: auto;
-} */
+  height: auto; /* 이건 꼭 안주고 생력해도 됨 */
+}
 
-/* video, iframe{
+video{
   width: 100%;
   height: auto;
-} */
+}
