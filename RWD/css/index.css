@@ -206,15 +206,30 @@ input[type="search"]{
 /* 반응형 iframe */
 .iframeWrapper{
   position: relative;
+  overflow: hidden;
   width: 100%;
-  height: 0;
-  padding-top: 56.25%;
+  height: 0; /* 높이를 절대 갖지말아라. padding으로 조절할거다! */
+  padding-top: 56.25%; 
+  /* 
+    16:9 비율 계산한 것임. 
+    padding-top, bottom은 width를 기준으로 움직인다! 
+  */
 }
+
+.iframeRatio-4-3{
+  padding-top: 75%;
+}
+
+.iframeRatio-16-3{
+  padding-top: 56.25%;
+} /* 비율 따라 조절할 때, iframeWrapper에게 주면 어떤 크기가 맞을지를 조절할 수 있다 */
 
 .iframeWrapper iframe{
   position: absolute;
   top: 0;
   left: 0;
+  bottom: 0;
+  right: 0;
   width: 100%;
   height: 100%;
 }
