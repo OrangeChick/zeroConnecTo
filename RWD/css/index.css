@@ -165,6 +165,25 @@ input[type="search"]{
   color: var(--accent-book);
 }
 
+/* 공통 추천 서적 */
+.book{
+  background: pink;
+  font-weight: 600;
+}
+
+.book__cover{
+  margin: 20px;
+  text-align: center;
+}
+
+.book__coverCaption{
+  padding-top: 10px;
+}
+
+.book__info{
+  text-align: center;
+  margin-bottom: 15px;
+}
 
 /* 모바일 디바이스 (Mobile Device) */
 @media (min-width: 320px) and (max-width: 768px){
