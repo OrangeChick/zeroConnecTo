@@ -234,6 +234,61 @@ input[type="search"]{
   height: 100%;
 }
 
+/* 공통 게시판 */
+.board{
+  position: relative;
+}
+
+.board__item{
+  margin-bottom: 10px;
+  white-space: nowrap;
+}
+
+.board__item .board__link{
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: inline-block;
+  white-space: nowrap;
+  width: 80%;
+  height: 1.5em;
+}
+
+.board__item .board__date{
+  float: right;
+}
+
+.board__more{
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+/* 공통 인기사이트 */
+.favorite__item{
+  margin-bottom: 10px;
+}
+
+.favorite__item:nth-child(1):after{
+  content:'레이아웃을 배우자';
+  color: var(--accent-favorite);
+}
+
+.favorite__item:nth-child(2)::after{
+  content:'게이머처럼 Flex';
+  color: var(--accent-favorite);
+}
+
+.favorite__item:nth-child(3)::after{
+  content:'농장주 되기 Grid';
+  color: var(--accent-favorite);
+}
+
+.favorite__item:nth-child(4)::after{
+  content:'최고의 웹교과서 MDN';
+  color: var(--accent-favorite);
+}
+
+
 /* 모바일 디바이스 (Mobile Device) */
 @media (min-width: 320px) and (max-width: 768px){
   /* 모바일 헤더 */
