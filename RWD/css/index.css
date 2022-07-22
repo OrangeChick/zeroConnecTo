@@ -240,53 +240,38 @@ input[type="search"]{
 }
 
 .board__item{
-  margin-bottom: 10px;
-  white-space: nowrap;
+  display: flex;
+  flex-flow: row nowrap;
+  background: pink;
+  margin-top: var(--spacing-xs);
 }
 
-.board__item .board__link{
-  overflow: hidden;
-  text-overflow: ellipsis;
-  display: inline-block;
-  white-space: nowrap;
-  width: 80%;
-  height: 1.5em;
+.board__link{
+  /* flex-grow: 1; */
+  width: calc(100% - 6rem);
+  background: lime;
+  white-space: nowrap; /* 개행금지 */
+  overflow: hidden; /* 겹치는 거 방지 */
+  text-overflow: ellipsis; /* 말줄임표 만들기 */
 }
 
-.board__item .board__date{
-  float: right;
+.board__date{
+  flex-grow: 1; /* 영역이 늘어나면서 정렬까지 완료! */
+  background: yellow;
+  text-align: right;
 }
 
 .board__more{
   position: absolute;
   top: 0;
   right: 0;
+  padding: var(--spacing-xs);
+  transform: translateX(var(--spacing-xs));
 }
+
 
 /* 공통 인기사이트 */
-.favorite__item{
-  margin-bottom: 10px;
-}
 
-.favorite__item:nth-child(1):after{
-  content:'레이아웃을 배우자';
-  color: var(--accent-favorite);
-}
-
-.favorite__item:nth-child(2)::after{
-  content:'게이머처럼 Flex';
-  color: var(--accent-favorite);
-}
-
-.favorite__item:nth-child(3)::after{
-  content:'농장주 되기 Grid';
-  color: var(--accent-favorite);
-}
-
-.favorite__item:nth-child(4)::after{
-  content:'최고의 웹교과서 MDN';
-  color: var(--accent-favorite);
-}
 
 
 /* 모바일 디바이스 (Mobile Device) */
