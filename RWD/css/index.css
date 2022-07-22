@@ -272,10 +272,6 @@ input[type="search"]{
 }
 
 /* 공통 트위터 */
-.twitter{
-  background: pink;
-}
-
 .twitter__userInfo{
   display: inline-flex; /* 인라인 요소와 어우러지게 하려고 써봄, 공백문자 없이 나란히 둘 수 있음 */
   gap: var(--spacing-xs);
@@ -287,14 +283,23 @@ input[type="search"]{
   width: 50px;
   height: 50px;
   max-width: 110px;
+  margin-left: var(--spacing-xs);
 }
 
 .twitter__userProfileImage{
   border: 1px solid var(--primary-color);
   border-radius: 50%;
   vertical-align: top;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 30% 40%;
 }
 
+.twitter__date{
+  display: block;
+  margin-top: var(--spacing-xs);
+}
 
 /* 모바일 디바이스 (Mobile Device) */
 @media (min-width: 320px) and (max-width: 768px){
@@ -473,13 +478,6 @@ input[type="search"]{
   .twitter__userProfile{
     width: 100px;
     height: 100px;
-  }
-
-  .twitter__userProfile img{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: top;
   }
 }
 
