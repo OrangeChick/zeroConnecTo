@@ -242,14 +242,12 @@ input[type="search"]{
 .board__item{
   display: flex;
   flex-flow: row nowrap;
-  background: pink;
   margin-top: var(--spacing-xs);
 }
 
 .board__link{
   /* flex-grow: 1; */
   width: calc(100% - 6rem);
-  background: lime;
   white-space: nowrap; /* 개행금지 */
   overflow: hidden; /* 겹치는 거 방지 */
   text-overflow: ellipsis; /* 말줄임표 만들기 */
@@ -257,7 +255,6 @@ input[type="search"]{
 
 .board__date{
   flex-grow: 1; /* 영역이 늘어나면서 정렬까지 완료! */
-  background: yellow;
   text-align: right;
 }
 
@@ -269,9 +266,10 @@ input[type="search"]{
   transform: translateX(var(--spacing-xs));
 }
 
-
 /* 공통 인기사이트 */
-
+.faovrite__item{
+  margin-top: var(--spacing-xs);
+}
 
 
 /* 모바일 디바이스 (Mobile Device) */
@@ -375,6 +373,14 @@ input[type="search"]{
 
   .menu.is--active{
     transform: none; /* or transform: translateX(0) */
+  }
+
+  /* 모바일 인기사이트 */
+  .favorite__link::after{
+    content: attr(data-tooltip); /* a가 가지고 있는 data-tooltip을 가지고 오세요 */
+    margin-left: var(--spacing-xs);
+    color: var(--accent-favorite);
+    font-size: var(--text-sm);
   }
 
 }
