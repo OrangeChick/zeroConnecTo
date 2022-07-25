@@ -1,0 +1,51 @@
+:root {
+  --mainColor: #12345678;
+}
+
+body {
+  color: var(--mainColor);
+  font-family: system-ui;
+}
+
+a {
+  color: rgb(0 0 100% / 90%);
+
+  &:hover {
+    color: rebeccapurple;
+  }
+
+	& span {
+		font-weight: bold;
+	}
+}
+
+:is(input, button):is(:hover, :focus) {
+	color: oklch(40% 0.268735435 34.568626);
+}
+
+@import "./reset.css";
+
+body{
+  font-size: 24px;
+  color: #000;
+  line-height:1.5;
+  background: #fff;
+}
+
+@media (min-width: 1024px) {
+  body{
+    background: yellow;
+  }
+}
+
+@media (min-width: 1024px) {
+  body{
+    color: blue;
+  }
+}
+
+@media (min-width: 1024px) {
+  body{
+    font-size: 36px;
+  }
+}
