@@ -375,15 +375,10 @@ legend {
 /* 20px */
 /* 24px */
 /* 1024px */
-@media (max-width: 767px) {
-  .appFooter {
-    background: yellow;
-  }
-}
-@media (min-width: 768px) {
-  .appFooter {
-    background: skyblue;
-  }
+.appFooter {
+  max-width: 64rem;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /*# sourceMappingURL=index.css.map */
