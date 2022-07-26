@@ -1,7 +1,4 @@
-$color-primary: pink;
-$url-images: "/assets/images/";
-$w: 200px;
-
+@use "./utils"  as *;
 .box {
   width: $w;
   margin-left: $w;
