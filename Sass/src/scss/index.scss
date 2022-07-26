@@ -1,7 +1,4 @@
 // index.scss
 @use "./base";
-@use "./utils" as *;
-
-.appFooter {
-  @include boxSizeMax;
-}
+@use "./layout";
+@use "./pages";

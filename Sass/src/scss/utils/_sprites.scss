@@ -1,1 +1,35 @@
-// sprite.scss
+// sprite image
+@use "./color" as *;
+@use "./unit" as *;
+
+$colors: (
+  "Book" : $green,
+  "News" : $yellow,
+  "Board" : $brown,
+  "Favorite" : $orange,
+  "Twitter" : $blue
+);
+
+@each $color, $color-value in $colors{
+  .accent#{$color}{
+    color: $color-value;
+  }
+}
+
+.sprite{
+  min-height: rem(60px);
+  background-image: url(./../../assets/images/sprite_main.png);
+  background-repeat: no-repeat;
+  padding-left: rem(64px);
+
+  $sprites: Book, Board, News, Favorite, Twitter; // list-type update
+  $x: 0;
+  $y: 0;
+
+  @each $sprite in $sprites{
+    &#{$sprite}{
+      background-position: $x $y;
+    }// 이름 붙이는 방법
+    $y: $y - 115px;
+  } // loop를 돌게 됨
+}

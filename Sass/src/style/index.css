@@ -362,23 +362,127 @@ legend {
   margin: -1px;
 }
 
-/* 8px */
-/* 12px */
-/* 16px */
-/* 20px */
-/* 24px */
-/* 32px */
-/* 12px */
-/* 14px */
-/* 16px */
-/* 18px */
-/* 20px */
-/* 24px */
-/* 1024px */
-.appFooter {
-  max-width: 64rem;
-  margin-left: auto;
-  margin-right: auto;
+.accentBook {
+  color: #abd375;
+}
+
+.accentNews {
+  color: #e8ca58;
+}
+
+.accentBoard {
+  color: #988574;
+}
+
+.accentFavorite {
+  color: #eea60a;
+}
+
+.accentTwitter {
+  color: #6aaee6;
+}
+
+.sprite {
+  min-height: 3.75rem;
+  background-image: url(./../../assets/images/sprite_main.png);
+  background-repeat: no-repeat;
+  padding-left: 4rem;
+}
+.spriteBook {
+  background-position: 0 0;
+}
+.spriteBoard {
+  background-position: 0 -115px;
+}
+.spriteNews {
+  background-position: 0 -230px;
+}
+.spriteFavorite {
+  background-position: 0 -345px;
+}
+.spriteTwitter {
+  background-position: 0 -460px;
+}
+
+.appHeader {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: stretch;
+  flex-wrap: nowrap;
+}
+@media (max-width: 767px) {
+  .appHeader {
+    background: #38302e;
+  }
+}
+@media (min-width: 768px) {
+  .appHeader {
+    position: relative;
+    background: #fff;
+    max-width: 64rem;
+    margin-left: auto;
+    margin-right: auto;
+    background: yellow;
+  }
+}
+
+@media (min-width: 768px) {
+  .logo {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}
+.logo__link {
+  display: block;
+  width: 12.75rem;
+  height: 3.6875rem;
+  background-image: url("./../../assets/images/webcafe-logo.png");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 144dpi) {
+  .logo__link {
+    background-image: url("./../../assets/images/webcafe-logo@2x.png");
+  }
+}
+
+.memberOnly {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+@media (max-width: 767px) {
+  .memberOnly {
+    order: -1;
+    color: #fff;
+    font-size: 0.875rem;
+    letter-spacing: -0.02em;
+  }
+}
+
+.searchForm__group {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: stretch;
+  flex-wrap: nowrap;
+}
+@media (max-width: 767px) {
+  .searchForm .formInput {
+    flex-grow: 1;
+  }
+}
+@media (min-width: 768px) {
+  .searchForm .formInput {
+    width: 25rem;
+  }
+}
+.searchForm .formInput__input {
+  width: 100%;
 }
 
 /*# sourceMappingURL=index.css.map */
