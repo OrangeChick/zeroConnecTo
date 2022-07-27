@@ -16,6 +16,14 @@ $colors: (
   }
 }
 
+$accents: (book, news, board, favorite, twitter);
+
+@each $accent in $accents{
+  .accent#{$accent}{
+    color: "$accent-" + #{$accent};
+  }
+}
+
 .sprite{
   min-height: rem(60px);
   background-image: url(./../../assets/images/sprite_main.png);
