@@ -1,7 +1,10 @@
 // 헤더
 @use "./../utils" as *;
+@use "./../components" as *;
 
 .appHeader{
+  @include paddingX(24px);
+  @include paddingY(16px);
   @include flexbox(column);
 
   @include mobile{
@@ -46,6 +49,8 @@
 
 // 검색 폼
 .searchForm{
+  margin-top: rem(16px);
+  
   &__group{
     @include flexbox($j: flex-end);
   }
@@ -62,5 +67,9 @@
     &__input{
       width: 100%;
     }
+  }
+
+  .button--primary{
+    margin-left: rem(16px);
   }
 }

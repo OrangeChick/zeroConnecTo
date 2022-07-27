@@ -31,6 +31,12 @@
 }
 
 // position 관련 믹스인
+@mixin pos($pos: absolute, $t: initial, $l: initial){
+  position: $pos;
+  top: $t;
+  left: $l;
+} // top, right, bottom, left를 주고, 생략했을 때는 initial 값이 되게끔 만들어서 쓰면 됨!
+
 @mixin posCenterX($pos: absolute){
   position: $pos;
   left: 50%;

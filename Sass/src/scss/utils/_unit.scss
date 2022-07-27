@@ -9,7 +9,7 @@ $rootUnit: 16px !default;
 
 @function rem($value, $base: $rootUnit) {
   @return (removeUnit(math.div($value, $base))) * 1rem;
-}
+} // 단위를 넣든 안넣든 px로 인식시키기 위해서 removeUnit으로 만든 것임!
 
 @function em($value, $base: $rootUnit) {
   @return (removeUnit(math.div($value, $base))) * 1em;
