@@ -1,0 +1,8 @@
+@use './../utils/var'; //하나씩 의존하기
+@forward './../utils/var' as v-*; //변수이름 구분하기
+
+.button{
+  padding: var.$spacing;
+}
+
+$spacing: 20px;

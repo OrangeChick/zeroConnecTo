@@ -1,12 +1,16 @@
 @use "./utils"  as *;
-.box {
-  width: $w;
-  margin-left: $w;
-  background: $color-primary url($url-images + "bg.jpg");
-}
+@import '@euid/scss-mixins';
+@include normalize;
 
-.box a{
-  font-size: 60px;
-  text-decoration: none;
-  color: teal;
-}
+
+// .box {
+//   width: $w;
+//   margin-left: $w;
+//   background: $color-primary url($url-images + "bg.jpg");
+// }
+// 
+// .box a{
+//   font-size: 60px;
+//   text-decoration: none;
+//   color: teal;
+// }

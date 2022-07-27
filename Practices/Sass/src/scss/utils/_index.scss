@@ -1,2 +1,4 @@
-@forward './reset';
-@forward './var';
+// @forward './reset';
+// @forward './var';
+@use './../component/button';
+@use './../component/card';
