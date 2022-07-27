@@ -1,1 +1,118 @@
-// home.scss
+@use "./../utils" as *;
+
+.home{
+  @include paddingY($spacing-base);
+  @include paddingX($spacing-lg);
+
+  & [class*="__title"]{
+    margin-bottom: $spacing-base;
+    font-weight: 700;
+    font-size: $text-md;
+  }
+
+  & [class*="__enTitle"]{
+    font-weight: 400;
+    font-size: $text-base;
+  }
+
+  & [class*="__summary"]{
+    line-height: 1.5;
+    margin-top: $spacing-base;
+  }
+
+  // 추천 서적
+  .book{
+    &__cover{
+      width: 70%;
+      @include autoMargin;
+      text-align: center;
+    }
+
+    &__coverCaption{
+      margin-top: $spacing-base;
+    }
+
+    &__info{
+      text-align: center;
+      margin-top: $spacing-base;
+
+      & dt:nth-child(1),
+      dd:nth-child(2){
+        display: inline-block;
+      }
+    }
+
+    .ratingStar{
+      font-size: $text-xl;
+    }
+  }
+
+  // 새소식
+  .news{
+    &__date{
+      display: block;
+      text-align: right;
+      margin-top: $spacing-xs;
+    }
+  }
+
+  // 반응형 iframe
+  .iframe{
+    &Wrapper{
+      position: relative;
+      overflow: hidden;
+      width: 100%;
+      height: 0 !important;
+    }
+
+    &Ratio-16-9{
+      padding-top: 56.25%;
+    }
+  }
+
+  @include mobile{
+    @include flexbox($j: space-between, $w: wrap);
+    .book, .news, .board, .favorite, .twitter{
+      width: 100%;
+    }
+  }
+
+  @include desktop{
+    @include boxSizeMax;
+
+    display: grid;
+    grid-template-columns:  repeat(12, 1fr);
+    grid-template-rows: auto;
+    grid-template-areas: "news news news news news news news news news news news news"
+    "book book book book twitter twitter twitter twitter twitter favorite favorite favorite"
+    "book book book book . board board board board board board board";
+    gap: $spacing-base;
+  }
+
+  .book{
+    grid-area: book;
+  }
+  
+  .news{
+    grid-area: news;
+  }
+  
+  .board{
+    grid-area: board;
+  }
+  
+  .favorite{
+    grid-area: favorite;
+  }
+  
+  .twitter{
+    grid-area: twitter;
+  }
+
+  .twitter__userProfile{
+    width: rem(100px);
+    height: rem(100px);
+  }
+}
+
+

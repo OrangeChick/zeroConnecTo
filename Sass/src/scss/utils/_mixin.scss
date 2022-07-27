@@ -16,8 +16,8 @@
 }
 
 @mixin marginX($marginX: 0) {
-  padding-left: rem($marginX);
-  padding-right: rem($marginX);
+  margin-left: rem($marginX);
+  margin-right: rem($marginX);
 }
 
 @mixin paddingY($paddingY: 0) {
