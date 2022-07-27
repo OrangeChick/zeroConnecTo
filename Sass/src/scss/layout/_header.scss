@@ -20,36 +20,14 @@
 
   .buttonWrapper{
     @include mobile{
-      background: transparent;
-      overflow: hidden;
-      @include pos(absolute, 60px);
-      right: rem(24px);
+      // 위치 설정
+      @include posRight(52px, 20px);
       padding: rem(4px);
     }
 
     @include desktop{
       display: none;
     }
-  }
-
-  .button--burger{
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: space-between;
-
-    &:focus{
-      outline-offset: rem(2px);
-    }
-  }
-
-  .button--burgerBarTop,
-  .button--burgerBarMiddel,
-  .button--burgerBarBottom{
-    width: 100%;
-    height: 20%;
-    background: $white;
-    border-radius: rem(20px);
-    transition: all 350ms;
   }
 }
 

@@ -31,11 +31,17 @@
 }
 
 // position 관련 믹스인
-@mixin pos($pos: absolute, $t: initial, $l: initial){
+@mixin posLeft($t, $l, $pos: absolute){
   position: $pos;
-  top: $t;
-  left: $l;
+  top: rem($t);
+  left: rem($l);
 } // top, right, bottom, left를 주고, 생략했을 때는 initial 값이 되게끔 만들어서 쓰면 됨!
+
+@mixin posRight($t, $r, $pos: absolute){
+  position: $pos;
+  top: rem($t);
+  right: rem($r);
+}
 
 @mixin posCenterX($pos: absolute){
   position: $pos;
@@ -55,6 +61,12 @@
   left: 50%;
   transform: trasnlate(50%, 50%);
 };
+
+// transform 관련 믹스인
+@mixin transRotate($tx: -50%, $ty: -50%, $rotate: 0){
+  top: 50%;
+  transform: translate(-$tx, -$ty) rotate(#{$rotate} + "deg");
+}
 
 // 박스의 최소 및 최대 너비를 설정하기 위한 믹스인
 @mixin boxSizeMinMax($min: 768px, $max: $container-width) {
