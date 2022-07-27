@@ -1,48 +1,35 @@
 @use "./../utils" as *;
-@use "./../components" as *;
 
 .menu{
-  background: pink;
-
-  &__link{
-    display: block;
-    padding: rem(8px);
-    font-size: rem(18px);
-    font-weight: 700;
+  &.is--active{
+    transform: none;
   }
 
   @include mobile{
-    background: $accent-opacity-color;
-    position: fixed;
-    top: 0;
-    left: 0;
+    @include posLeft(0, 0, fixed);
     width: 70%;
     height: 100vh;
-    backdrop-filter: blur(rem(4px));
-    padding: rem(8px);
-    transform: translateX(-150%);
-    transition: all 300ms;
-
-    &__item{
-      border-bottom: 1px solid $silver;
-    }
-
-    &.is--active{
-      transform: none;
-    }
+    background: rgba($green, 0.85);
+    backdrop-filter: blur(4px);
+    transform: translateX(-120%);
   }
 
   @include desktop{
     background: $secondary-color;
-    padding: rem(16px) rem(24px);
 
     &__list{
       @include boxSizeMax;
-      @include flexbox(row, space-between, center, nowrap);
-      padding: rem(20px);
+      @include flexbox($j: space-between);
     }
+  }
+  
+      &__item{
+        @include marginY(16px);
+      }
 
-    &__link{
+  &__link{
+    @include paddingY(8px);
+    @include desktop{
       color: $white;
       text-shadow: 1px 1px 0 $black, -1px -1px 0 $black;
     }

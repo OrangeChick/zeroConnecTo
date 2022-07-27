@@ -575,39 +575,24 @@ legend {
   margin-left: 1rem;
 }
 
-.menu {
-  background: pink;
-}
-.menu__link {
-  display: block;
-  padding: 0.5rem;
-  font-size: 1.125rem;
-  font-weight: 700;
+.menu.is--active {
+  transform: none;
 }
 @media (max-width: 767px) {
   .menu {
-    background: hsla(60deg, 50%, 50%, 0.85);
     position: fixed;
-    top: 0;
-    left: 0;
+    top: 0rem;
+    left: 0rem;
     width: 70%;
     height: 100vh;
-    backdrop-filter: blur(0.25rem);
-    padding: 0.5rem;
-    transform: translateX(-150%);
-    transition: all 300ms;
-  }
-  .menu__item {
-    border-bottom: 1px solid #767676;
-  }
-  .menu.is--active {
-    transform: none;
+    background: rgba(171, 211, 117, 0.85);
+    backdrop-filter: blur(4px);
+    transform: translateX(-120%);
   }
 }
 @media (min-width: 768px) {
   .menu {
     background: #988574;
-    padding: 1rem 1.5rem;
   }
   .menu__list {
     max-width: 64rem;
@@ -616,10 +601,19 @@ legend {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    align-items: center;
+    align-items: stretch;
     flex-wrap: nowrap;
-    padding: 1.25rem;
   }
+}
+.menu__item {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+.menu__link {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+@media (min-width: 768px) {
   .menu__link {
     color: #fff;
     text-shadow: 1px 1px 0 #000, -1px -1px 0 #000;
