@@ -46,10 +46,15 @@
   }
 }
 
+// .home > section, .home > article{
+//   @include flexbox(column);
+//   gap: rem(16px);
+// }
+
 .book{
   &__cover{
     width: 70;
-    @include autoMargin;
+    @include boxCenter(70%);
     text-align: center;
   }
 
@@ -58,119 +63,57 @@
   }
 
   &__info{
-    text-align: center;
-    margin-top: rem(16px);
-
-    & dt:nth-child(1),
-    dd:nth-child(2){
-      display: inline-block;
+    @include marginY(16px);
+    dt:first-child{
+      margin-right: rem(8px);
     }
+    @include flexbox($j: center, $w: wrap);
   }
 
   .ratingStar{
-    font-size: rem(24px);
-  }
-}
-
-.news{
-  display: block;
-  text-align: left;
-  margin-top: rem(8px);
-
-}
-
-.iframeWrapper{
-  position: relative;
-  overflow: hidden;
-  width: 100%;
-  height: 0 !important;
-
-  & iframe{
-    position: absolute;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
     width: 100%;
-    height: 100%;
+    text-align: center;
+    font-size: rem(32px);
   }
-}
-
-.iframeRatio-16-9{
-  padding-top: 56.25%;
 }
 
 .board{
   position: relative;
-
-  &__item{
-    @include flexbox;
-    margin-top: rem(8px);
-  }
-
-  &__link{
-    width: calc(100% - 6rem);
-    @include textEllipis;
-  }
-
-  &__date{
-    flex-grow: 1;
-    text-align: right;
-  }
-
   &__more{
     @include posRight(0, 0);
-    padding: rem(12px);
-    transform: translateX(12px);
   }
 }
 
 .favorite{
-  &__item{
-    margin-top: rem(8px);
+  &__link::after{
+    content: attr(data-tooltip);
+    color: $accent-favorite;
+    font-size: rem(12px);
   }
 }
 
 .twitter{
-  &__userInfo{
-    display: inline-flex;
-    gap: rem(8px);
-  }
-
   &__userProfile{
-    float: right;
     shape-outside: circle(50%);
-    width: 50px;
-    height: 50px;
+    float: right;
+    width: 20%;
     max-width: 110px;
-    margin-left: rem(8px);
+    height: 110px;
+
+    // &Image{} 이렇게 쓰면 너무 깊어져서 가독성이 떨어질 수 있음
   }
 
   &__userProfileImage{
-    border: 1px solid $primary-color;
     border-radius: 50%;
-    vertical-align: top;
     width: 100%;
     height: 100%;
     object-fit: cover;
     object-position: 30% 40%;
   }
-  &__date{
-    display: block;
-    margin-top: rem(8px);
-  }
 }
 
-.appFooter{
-  background: $primary-color;
-  color: $white;
-  padding: rem(32px) rem(24px);
-
-  @include desktop{
-    text-align: center;
-  }
+.iframeWrapper{
+  @include responsIframe;
 }
 
-.address{
-  margin-bottom: rem(16px);
-}
+// 전체 여백처리 안했습니다!

@@ -80,6 +80,11 @@
   @include autoMargin;
 }
 
+@mixin boxCenter($width: 100%) {
+  width: $width;
+  @include autoMargin;
+}
+
 // 말줄임표 믹스인
 @mixin textEllipis {
   text-overflow: hidden;

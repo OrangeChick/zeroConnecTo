@@ -640,6 +640,30 @@ legend {
   }
 }
 
+.appFooter {
+  background: #38302e;
+  color: #fff;
+  padding: 1.5rem 1.5rem;
+}
+@media (min-width: 768px) {
+  .appFooter {
+    text-align: center;
+  }
+}
+
+.address {
+  margin-bottom: 1rem;
+}
+@media (max-width: 767px) {
+  .address {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: stretch;
+    flex-wrap: nowrap;
+  }
+}
+
 [class*=__title] {
   display: flex;
   flex-direction: column;
@@ -704,6 +728,7 @@ legend {
 
 .book__cover {
   width: 70;
+  width: 70%;
   margin-left: auto;
   margin-right: auto;
   text-align: center;
@@ -712,115 +737,65 @@ legend {
   margin-top: 1rem;
 }
 .book__info {
-  text-align: center;
   margin-top: 1rem;
+  margin-bottom: 1rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: stretch;
+  flex-wrap: wrap;
 }
-.book__info dt:nth-child(1),
-.book__info dd:nth-child(2) {
-  display: inline-block;
+.book__info dt:first-child {
+  margin-right: 0.5rem;
 }
 .book .ratingStar {
-  font-size: 1.5rem;
-}
-
-.news {
-  display: block;
-  text-align: left;
-  margin-top: 0.5rem;
-}
-
-.iframeWrapper {
-  position: relative;
-  overflow: hidden;
   width: 100%;
-  height: 0 !important;
-}
-.iframeWrapper iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  width: 100%;
-  height: 100%;
-}
-
-.iframeRatio-16-9 {
-  padding-top: 56.25%;
+  text-align: center;
+  font-size: 2rem;
 }
 
 .board {
   position: relative;
 }
-.board__item {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  align-items: stretch;
-  flex-wrap: nowrap;
-  margin-top: 0.5rem;
-}
-.board__link {
-  width: calc(100% - 6rem);
-  text-overflow: hidden;
-  white-space: nowrap;
-  overflow: hidden;
-}
-.board__date {
-  flex-grow: 1;
-  text-align: right;
-}
 .board__more {
   position: absolute;
   top: 0rem;
   right: 0rem;
-  padding: 0.75rem;
-  transform: translateX(12px);
 }
 
-.favorite__item {
-  margin-top: 0.5rem;
+.favorite__link::after {
+  content: attr(data-tooltip);
+  color: #eea60a;
+  font-size: 0.75rem;
 }
 
-.twitter__userInfo {
-  display: inline-flex;
-  gap: 0.5rem;
-}
 .twitter__userProfile {
-  float: right;
   shape-outside: circle(50%);
-  width: 50px;
-  height: 50px;
+  float: right;
+  width: 20%;
   max-width: 110px;
-  margin-left: 0.5rem;
+  height: 110px;
 }
 .twitter__userProfileImage {
-  border: 1px solid #38302e;
   border-radius: 50%;
-  vertical-align: top;
   width: 100%;
   height: 100%;
   object-fit: cover;
   object-position: 30% 40%;
 }
-.twitter__date {
-  display: block;
-  margin-top: 0.5rem;
-}
 
-.appFooter {
-  background: #38302e;
-  color: #fff;
-  padding: 2rem 1.5rem;
+.iframeWrapper {
+  position: relative;
+  width: 100%;
+  height: 0 !important;
+  padding-top: 56.25%;
 }
-@media (min-width: 768px) {
-  .appFooter {
-    text-align: center;
-  }
-}
-
-.address {
-  margin-bottom: 1rem;
+.iframeWrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
 
 .box {
