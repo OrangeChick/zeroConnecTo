@@ -575,6 +575,57 @@ legend {
   margin-left: 1rem;
 }
 
+.menu {
+  background: pink;
+}
+.menu__link {
+  display: block;
+  padding: 0.5rem;
+  font-size: 1.125rem;
+  font-weight: 700;
+}
+@media (max-width: 767px) {
+  .menu {
+    background: hsla(60deg, 50%, 50%, 0.85);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 70%;
+    height: 100vh;
+    backdrop-filter: blur(0.25rem);
+    padding: 0.5rem;
+    transform: translateX(-150%);
+    transition: all 300ms;
+  }
+  .menu__item {
+    border-bottom: 1px solid #767676;
+  }
+  .menu.is--active {
+    transform: none;
+  }
+}
+@media (min-width: 768px) {
+  .menu {
+    background: #988574;
+    padding: 1rem 1.5rem;
+  }
+  .menu__list {
+    max-width: 64rem;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: nowrap;
+    padding: 1.25rem;
+  }
+  .menu__link {
+    color: #fff;
+    text-shadow: 1px 1px 0 #000, -1px -1px 0 #000;
+  }
+}
+
 .box {
   font-size: 1.5rem;
 }
