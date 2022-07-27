@@ -11,4 +11,9 @@
     background: $secondary-color;
     color: $white;
   } // 버튼을 규격화시킬 때는 크기 지정이 필요하다!
+
+  &--burger{
+    width: rem(32px);
+    height: rem(32px);
+  }
 }

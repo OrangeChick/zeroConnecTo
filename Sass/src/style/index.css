@@ -415,6 +415,10 @@ legend {
   background: #988574;
   color: #fff;
 }
+.button--burger {
+  width: 2rem;
+  height: 2rem;
+}
 
 .formInput__input {
   -webkit-appearance: none;
@@ -450,6 +454,39 @@ legend {
     margin-right: auto;
     background: yellow;
   }
+}
+@media (max-width: 767px) {
+  .appHeader .buttonWrapper {
+    background: transparent;
+    overflow: hidden;
+    position: absolute;
+    top: 60px;
+    left: initial;
+    right: 1.5rem;
+    padding: 0.25rem;
+  }
+}
+@media (min-width: 768px) {
+  .appHeader .buttonWrapper {
+    display: none;
+  }
+}
+.appHeader .button--burger {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+}
+.appHeader .button--burger:focus {
+  outline-offset: 0.125rem;
+}
+.appHeader .button--burgerBarTop,
+.appHeader .button--burgerBarMiddel,
+.appHeader .button--burgerBarBottom {
+  width: 100%;
+  height: 20%;
+  background: #fff;
+  border-radius: 1.25rem;
+  transition: all 350ms;
 }
 
 @media (min-width: 768px) {
