@@ -20,17 +20,16 @@
     <!-- 1. 자바스크립트로 제어하기 위한 버튼 클래스 지정 (toggle-theme-button) -->
     <!-- 2. body 영역을 기준으로 오른쪽 상단에 배치 / 3. 글자 및 배경색상 / 4. 라운딩 처리 / 5. 버튼 크기 고정(커스텀) -->
     <button type="button"
-            class="">
+            class="toggle-theme-button absolute top-5 right-5 p-4 text-gray-700 bg-gray-300 rounded-md w-[200px]">
       다크모드 보기
     </button>
     <!-- 전체 콘텐츠 컨테이너 -->
     <!-- 1. 플렉스로 배치 (모바일 및 데스크탑 스타일) / 2. 높이 / 3. 텍스트 색상 / 4. 다크모드 텍스트 및 배경 색상 /  -->
-    <div class=""
-         style="">
+    <div class="flex items-start justify-center h-screen md:items-center text-gray1 dark:text-white dark:bg-gray-900">
 
       <!-- 데스크 탑에서 보여지게 될 로그인 콘텐츠 박스(테두리) -->
       <!-- 1. 가로 크기(full) / 2. 데스크탑 최대 가로크기(md:min-w-screen-sm) / 3. 데스크탑에만 border / 4. padding-->
-      <div class="">
+      <div class="w-full md:max-w-screen-sm px-5 py-10 md:px-12 md:py-16 md:border md:rounded-2xl md:border-gray5">
         <!-- 패스트 캠퍼스 브랜드 로고 -->
         <h1 class="logo">
           <a href="#">
@@ -49,7 +48,7 @@
 
         <!-- 패스트 캠퍼스 슬로건 -->
         <!-- 1. 제목과 슬로건 사이 여백(margin) / 2. 글자 크기 및 색상 / 3. 다크모드 글자 색상-->
-        <p class="">
+        <p class="mt-5 text-3xl text-black dark:text-white">
           인생을 바꾸는 교육,
           <span class="block">패스트 캠퍼스.</span>
         </p>
